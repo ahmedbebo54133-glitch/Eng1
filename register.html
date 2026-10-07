@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>إنشاء حساب | ENG Forge ⚙️</title>
+
+    <!-- Cairo Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="register.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         REGISTER CONTAINER
+    ====================================================== -->
+
+    <div class="auth-container">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="auth-logo">
+
+            <a href="../index.html">
+                ENG Forge <span>⚙️</span>
+            </a>
+
+            <p>
+                Engineering Education Platform
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CARD
+        ================================================== -->
+
+        <div class="auth-card">
+
+
+            <!-- =================================================
+                 TITLE
+            ================================================== -->
+
+            <div class="auth-title">
+
+                <div class="auth-icon">
+                    ⚙️
+                </div>
+
+                <h1>
+                    إنشاء حساب
+                </h1>
+
+                <p>
+                    أنشئ حسابك وابدأ رحلتك التعليمية
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORM
+            ================================================== -->
+
+            <form
+                id="registerForm"
+                class="auth-form"
+                novalidate
+            >
+
+
+                <!-- =================================================
+                     PROFILE PHOTO
+                ================================================== -->
+
+                <div class="input-group profile-photo-group">
+
+                    <label>
+                        صورة البروفايل
+
+                        <span class="optional-label">
+                            اختياري
+                        </span>
+                    </label>
+
+
+                    <div class="profile-photo-picker">
+
+
+                        <!-- PHOTO PREVIEW -->
+
+                        <div
+                            class="profile-photo-preview"
+                            id="profilePhotoPreview"
+                        >
+
+                            <span id="profilePhotoPlaceholder">
+                                👤
+                            </span>
+
+                            <img
+                                id="profilePhotoImage"
+                                src=""
+                                alt="صورة البروفايل"
+                            >
+
+                        </div>
+
+
+                        <!-- PHOTO ACTIONS -->
+
+                        <div class="profile-photo-actions">
+
+                            <label
+                                for="profilePhoto"
+                                class="profile-photo-btn"
+                            >
+                                📷 اختيار صورة
+                            </label>
+
+
+                            <input
+                                type="file"
+                                id="profilePhoto"
+                                name="profilePhoto"
+                                accept="image/*"
+                            >
+
+
+                            <small>
+                                صورة اختيارية — الحد الأقصى 5MB
+                            </small>
+
+
+                            <button
+                                type="button"
+                                id="removeProfilePhoto"
+                                class="remove-profile-photo"
+                            >
+                                إزالة الصورة
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     NAME
+                ================================================== -->
+
+                <div class="input-group">
+
+                    <label for="studentName">
+                        الاسم بالكامل
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            👤
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="اكتب اسمك بالكامل"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PHONE
+                ================================================== -->
+
+                <div class="input-group">
+
+                    <label for="studentId">
+                        رقم الهاتف
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            📱
+                        </span>
+
+
+                        <input
+                            type="tel"
+                            id="studentId"
+                            name="studentId"
+                            placeholder="01xxxxxxxxx"
+                            inputmode="numeric"
+                            maxlength="11"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     GENDER
+                ================================================== -->
+
+                <div class="input-group gender-group">
+
+                    <span class="gender-title">
+                        النوع
+                    </span>
+
+
+                    <div class="gender-options">
+
+
+                        <!-- MALE -->
+
+                        <button
+                            type="button"
+                            class="gender-option male"
+                            data-gender="male"
+                        >
+
+                            <span class="gender-icon">
+                                👨
+                            </span>
+
+                            <span>
+                                ذكر
+                            </span>
+
+                        </button>
+
+
+                        <!-- FEMALE -->
+
+                        <button
+                            type="button"
+                            class="gender-option female"
+                            data-gender="female"
+                        >
+
+                            <span class="gender-icon">
+                                👩
+                            </span>
+
+                            <span>
+                                أنثى
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        id="gender"
+                        name="gender"
+                        value=""
+                    >
+
+                </div>
+
+
+                <!-- =================================================
+                     EMAIL
+                ================================================== -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        البريد الإلكتروني
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            ✉️
+                        </span>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@gmail.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PASSWORD
+                ================================================== -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        كلمة المرور
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            🔒
+                        </span>
+
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="6 أحرف على الأقل"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONFIRM PASSWORD
+                ================================================== -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        تأكيد كلمة المرور
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            🔐
+                        </span>
+
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="أعد كتابة كلمة المرور"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TERMS
+                ================================================== -->
+
+                <label class="checkbox-group">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                    >
+
+                    <span>
+                        أوافق على الشروط والأحكام
+                        وسياسة استخدام منصة ENG Forge.
+                    </span>
+
+                </label>
+
+
+                <!-- =================================================
+                     MESSAGE
+                ================================================== -->
+
+                <div
+                    id="authMessage"
+                    class="auth-message"
+                ></div>
+
+
+                <!-- =================================================
+                     LOADING
+                ================================================== -->
+
+                <div
+                    id="authLoading"
+                    class="auth-loading"
+                >
+                    جاري إنشاء الحساب... ⏳
+                </div>
+
+
+                <!-- =================================================
+                     REGISTER BUTTON
+                ================================================== -->
+
+                <button
+                    type="submit"
+                    id="registerBtn"
+                    class="auth-submit"
+                >
+                    إنشاء الحساب
+                </button>
+
+
+            </form>
+
+
+            <!-- =================================================
+                 DIVIDER
+            ================================================== -->
+
+            <div class="auth-divider">
+                <span>
+                    أو
+                </span>
+            </div>
+
+
+            <!-- =================================================
+                 GOOGLE
+            ================================================== -->
+
+            <button
+                type="button"
+                id="googleRegisterBtn"
+                class="google-btn"
+            >
+
+                <span class="google-icon">
+                    G
+                </span>
+
+                <span>
+                    التسجيل بواسطة Google
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN SWITCH
+        ================================================== -->
+
+        <div class="auth-switch">
+
+            لديك حساب بالفعل؟
+
+            <a href="login.html">
+                تسجيل الدخول
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             BACK HOME
+        ================================================== -->
+
+        <a
+            href="../index.html"
+            class="back-home"
+        >
+            ← العودة إلى الصفحة الرئيسية
+        </a>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <!-- Cloudinary -->
+    <script src="../cloudinary.js"></script>
+
+
+    <!-- Firebase -->
+    <script
+        type="module"
+        src="../firebase.js"
+    ></script>
+
+
+    <!-- Register -->
+    <script
+        type="module"
+        src="register.js"
+    ></script>
+
+
+</body>
+
+</html>

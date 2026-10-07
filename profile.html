@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <!-- =====================================================
+         ENG FORGE
+         PROFILE PAGE
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#11161d"
+    >
+
+    <meta
+        name="description"
+        content="ENG Forge - الملف الشخصي للطالب"
+    >
+
+    <title>ENG Forge | الملف الشخصي</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         PROFILE STYLE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="profile.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="profile-header">
+
+        <div class="header-content">
+
+            <a
+                href="index.html"
+                class="profile-logo"
+            >
+                <span>⚙️</span>
+                ENG Forge
+            </a>
+
+
+            <a
+                href="index.html"
+                class="home-btn"
+            >
+                🏠 الرئيسية
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="profile-container">
+
+
+        <section class="profile-card">
+
+
+            <!-- =================================================
+                 PROFILE TOP
+            ================================================== -->
+
+            <div class="profile-top">
+
+
+                <!-- AVATAR -->
+
+                <div class="profile-avatar-wrapper">
+
+                    <img
+                        id="profileAvatar"
+                        class="profile-avatar"
+                        src=""
+                        alt="صورة الطالب"
+                    >
+
+                    <div
+                        id="profileAvatarPlaceholder"
+                        class="profile-avatar-placeholder"
+                    >
+                        👤
+                    </div>
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="profile-heading">
+
+                    <span class="profile-label">
+                        STUDENT PROFILE
+                    </span>
+
+                    <h1 id="profileName">
+                        جاري التحميل...
+                    </h1>
+
+                    <p id="profileEmail">
+                        جاري تحميل البيانات...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STUDENT INFORMATION
+            ================================================== -->
+
+            <div class="profile-section">
+
+                <div class="section-title">
+
+                    <span>
+                        👨‍🎓
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            بيانات الطالب
+                        </h2>
+
+                        <p>
+                            البيانات المسجلة في المنصة
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="profile-info-grid"
+                    id="profileInfoGrid"
+                >
+
+
+                    <!-- NAME -->
+
+                    <div class="info-box">
+
+                        <span class="info-icon">
+                            👤
+                        </span>
+
+                        <div>
+
+                            <small>
+                                اسم الطالب
+                            </small>
+
+                            <strong id="studentName">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDENT ID -->
+
+                    <div class="info-box">
+
+                        <span class="info-icon">
+                            🆔
+                        </span>
+
+                        <div>
+
+                            <small>
+                                رقم الطالب
+                            </small>
+
+                            <strong id="studentId">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="info-box">
+
+                        <span class="info-icon">
+                            📧
+                        </span>
+
+                        <div>
+
+                            <small>
+                                البريد الإلكتروني
+                            </small>
+
+                            <strong
+                                id="studentEmail"
+                                dir="ltr"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GENDER -->
+
+                    <div class="info-box">
+
+                        <span class="info-icon">
+                            ⚧️
+                        </span>
+
+                        <div>
+
+                            <small>
+                                النوع
+                            </small>
+
+                            <strong id="studentGender">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ACCOUNT TYPE -->
+
+                    <div class="info-box">
+
+                        <span class="info-icon">
+                            🔐
+                        </span>
+
+                        <div>
+
+                            <small>
+                                نوع الحساب
+                            </small>
+
+                            <strong id="accountType">
+                                طالب
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     EDIT AREA
+                ================================================== -->
+
+                <div
+                    id="editArea"
+                    class="edit-area"
+                    hidden
+                >
+
+                    <!-- PROFILE PHOTO -->
+
+                    <div class="edit-field">
+
+                        <label>
+                            صورة البروفايل
+                        </label>
+
+                        <div class="edit-photo-row">
+
+                            <div
+                                class="edit-photo-preview"
+                                id="editPhotoPreview"
+                            >
+                                👤
+                            </div>
+
+                            <div>
+
+                                <label
+                                    for="editProfilePhoto"
+                                    class="photo-select-btn"
+                                >
+                                    📷 تغيير الصورة
+                                </label>
+
+                                <input
+                                    type="file"
+                                    id="editProfilePhoto"
+                                    accept="image/*"
+                                    hidden
+                                >
+
+                                <small>
+                                    الحد الأقصى 5MB
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NAME -->
+
+                    <div class="edit-field">
+
+                        <label for="editName">
+                            اسم الطالب
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editName"
+                            placeholder="اكتب اسمك بالكامل"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+
+                    <!-- STUDENT ID -->
+
+                    <div class="edit-field">
+
+                        <label for="editStudentId">
+                            رقم الطالب
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="editStudentId"
+                            placeholder="01xxxxxxxxx"
+                            inputmode="numeric"
+                            maxlength="11"
+                        >
+
+                    </div>
+
+
+                    <!-- GENDER -->
+
+                    <div class="edit-field">
+
+                        <label>
+                            النوع
+                        </label>
+
+                        <div class="edit-gender-options">
+
+                            <button
+                                type="button"
+                                class="edit-gender-option"
+                                data-gender="male"
+                            >
+                                👨 ذكر
+                            </button>
+
+                            <button
+                                type="button"
+                                class="edit-gender-option"
+                                data-gender="female"
+                            >
+                                👩 أنثى
+                            </button>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="editGender"
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL READ ONLY -->
+
+                    <div class="edit-field">
+
+                        <label>
+                            البريد الإلكتروني
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                            readonly
+                        >
+
+                        <small>
+                            البريد الإلكتروني مرتبط بحساب Firebase ولا يتم تغييره من هنا.
+                        </small>
+
+                    </div>
+
+
+                    <!-- EDIT ACTIONS -->
+
+                    <div class="edit-actions">
+
+                        <button
+                            type="button"
+                            id="saveProfileBtn"
+                            class="primary-btn"
+                        >
+                            💾 حفظ التعديلات
+                        </button>
+
+                        <button
+                            type="button"
+                            id="cancelEditBtn"
+                            class="logout-btn"
+                        >
+                            إلغاء
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <div class="profile-section">
+
+                <div class="section-title">
+
+                    <span>
+                        📊
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            النتائج
+                        </h2>
+
+                        <p>
+                            نتائج الامتحانات الخاصة بك
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!--
+                    النتائج يتم تحميلها من Firestore
+                    بواسطة profile.js
+                -->
+
+                <div
+                    class="results-placeholder"
+                    id="resultsBox"
+                >
+
+                    <div class="placeholder-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        جاري تحميل النتائج...
+                    </h3>
+
+                    <p>
+                        يتم الآن البحث عن نتائج الامتحانات الخاصة بك.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACCOUNT ACTIONS
+            ================================================== -->
+
+            <div
+                class="profile-actions"
+                id="profileActions"
+            >
+
+                <button
+                    type="button"
+                    id="editProfileBtn"
+                    class="primary-btn"
+                >
+                    ✏️ تعديل البيانات
+                </button>
+
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="logout-btn"
+                >
+                    🚪 تسجيل الخروج
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 MESSAGE
+            ================================================== -->
+
+            <div
+                id="profileMessage"
+                class="profile-message"
+            ></div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="profile-footer">
+
+        <p>
+            ENG Forge © 2026
+        </p>
+
+        <small>
+            قسم تشغيل وتشكيل المعادن
+        </small>
+
+    </footer>
+
+
+    <!-- =====================================================
+         CLOUDINARY
+    ====================================================== -->
+
+    <script src="cloudinary.js"></script>
+
+
+    <!-- =====================================================
+         FIREBASE
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="firebase.js"
+    ></script>
+
+
+    <!-- =====================================================
+         PROFILE JS
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="profile.js"
+    ></script>
+
+
+</body>
+
+</html>

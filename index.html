@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <!-- =====================================================
+         ENG FORGE
+         MAIN PAGE
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#11161d"
+    >
+
+    <meta
+        name="description"
+        content="ENG Forge - منصة تعليمية لقسم تشغيل وتشكيل المعادن"
+    >
+
+    <title>ENG Forge</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         MAIN STYLE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         START OF HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="header-content">
+
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="ENG Forge"
+            >
+                ENG Forge ⚙️
+            </a>
+
+
+            <!-- =================================================
+                 ACCOUNT AREA
+            ================================================== -->
+
+            <div class="account-area">
+
+
+                <!-- ACCOUNT BUTTON -->
+
+                <button
+                    type="button"
+                    class="profile-btn"
+                    id="accountBtn"
+                    aria-label="الحساب"
+                    aria-expanded="false"
+                >
+
+                    <span
+                        id="userAvatarHome"
+                        class="user-avatar-home"
+                    >
+                        👤
+                    </span>
+
+                </button>
+
+
+                <!-- =================================================
+                     ACCOUNT MENU
+                ================================================== -->
+
+                <div
+                    class="account-menu"
+                    id="accountMenu"
+                    hidden
+                >
+
+
+                    <!-- ===============================
+                         NOT LOGGED IN
+                    ================================ -->
+
+                    <div
+                        id="guestAccount"
+                        class="account-menu-section"
+                    >
+
+                        <div class="account-menu-title">
+                            مرحبًا بك في ENG Forge
+                        </div>
+
+                        <div class="account-menu-subtitle">
+                            سجّل دخولك للوصول إلى حسابك
+                        </div>
+
+
+                        <!-- LOGIN -->
+
+                        <a
+                            href="login.html"
+                            class="account-menu-item"
+                            id="loginLink"
+                        >
+
+                            <span class="account-menu-icon">
+                                🔐
+                            </span>
+
+                            <span>
+                                تسجيل الدخول
+                            </span>
+
+                        </a>
+
+
+                        <!-- REGISTER -->
+
+                        <a
+                            href="register.html"
+                            class="account-menu-item"
+                            id="registerLink"
+                        >
+
+                            <span class="account-menu-icon">
+                                📝
+                            </span>
+
+                            <span>
+                                إنشاء حساب
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- ===============================
+                         LOGGED IN
+                    ================================ -->
+
+                    <div
+                        id="userAccount"
+                        class="account-menu-section"
+                        hidden
+                    >
+
+
+                        <!-- USER INFO -->
+
+                        <div class="account-user-info">
+
+                            <div
+                                class="account-user-avatar"
+                                id="accountUserAvatar"
+                            >
+                                👤
+                            </div>
+
+                            <div class="account-user-details">
+
+                                <strong id="accountUserName">
+                                    المستخدم
+                                </strong>
+
+                                <span id="accountUserEmail">
+                                    -
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PROFILE -->
+
+                        <a
+                            href="profile.html"
+                            class="account-menu-item"
+                            id="profileLink"
+                        >
+
+                            <span class="account-menu-icon">
+                                👤
+                            </span>
+
+                            <span>
+                                الملف الشخصي
+                            </span>
+
+                        </a>
+
+
+                        <!-- ADMIN -->
+
+                        <a
+                            href="admin.html"
+                            class="account-menu-item admin-menu-item"
+                            id="adminLink"
+                            hidden
+                        >
+
+                            <span class="account-menu-icon">
+                                ⚙️
+                            </span>
+
+                            <span>
+                                لوحة الإدارة
+                            </span>
+
+                        </a>
+
+
+                        <!-- LOGOUT -->
+
+                        <button
+                            type="button"
+                            class="account-menu-item logout-item"
+                            id="logoutBtn"
+                        >
+
+                            <span class="account-menu-icon">
+                                🚪
+                            </span>
+
+                            <span>
+                                تسجيل الخروج
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         END OF HEADER
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         START OF MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             WELCOME SECTION
+        ================================================== -->
+
+        <section class="welcome-section">
+
+            <span class="welcome-badge">
+                ⚙️ ENG FORGE
+            </span>
+
+            <h1>
+                المواد الدراسية
+            </h1>
+
+            <p>
+                اختر المادة للدخول إلى المحاضرات والامتحانات والمحتوى المهم
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUBJECTS SECTION
+        ================================================== -->
+
+        <section
+            class="subjects-section"
+            aria-label="المواد الدراسية"
+        >
+
+            <div
+                id="subjectsContainer"
+                class="subjects-container"
+            >
+
+
+                <!-- =========================================
+                     LOADING
+                ========================================== -->
+
+                <div
+                    class="loading"
+                    id="subjectsLoading"
+                >
+                    جاري تحميل المواد...
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             EMPTY MESSAGE
+        ================================================== -->
+
+        <div
+            id="subjectsEmpty"
+            class="subjects-empty"
+            hidden
+        >
+
+            <div class="empty-icon">
+                📚
+            </div>
+
+            <h3>
+                لا توجد مواد متاحة حاليًا
+            </h3>
+
+            <p>
+                سيتم إضافة المواد الدراسية قريبًا.
+            </p>
+
+        </div>
+
+
+    </main>
+
+    <!-- =====================================================
+         END OF MAIN
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         START OF FOOTER
+    ====================================================== -->
+
+    <footer class="main-footer">
+
+        <p>
+            ENG Forge © 2026
+        </p>
+
+        <small>
+            قسم تشغيل وتشكيل المعادن
+        </small>
+
+    </footer>
+
+    <!-- =====================================================
+         END OF FOOTER
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Firebase -->
+
+    <script
+        type="module"
+        src="firebase.js"
+    ></script>
+
+
+    <!-- Main App -->
+
+    <script
+        type="module"
+        src="app.js"
+    ></script>
+
+
+</body>
+
+</html>

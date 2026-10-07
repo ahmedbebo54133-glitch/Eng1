@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <!-- =====================================================
+         ENG FORGE
+         ADMIN DASHBOARD
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#11161d"
+    >
+
+    <meta
+        name="description"
+        content="ENG Forge - لوحة تحكم الإدارة"
+    >
+
+    <title>ENG Forge | Admin</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         ADMIN STYLE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         START OF ADMIN HEADER
+    ====================================================== -->
+
+    <header class="admin-header">
+
+        <div class="admin-header-content">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="admin-logo"
+            >
+
+                <span class="logo-mark">
+                    ⚙
+                </span>
+
+                <span>
+                    ENG Forge
+                </span>
+
+            </a>
+
+
+            <!-- ADMIN INFO -->
+
+            <div class="admin-user">
+
+                <div class="admin-user-info">
+
+                    <strong id="adminName">
+                        Admin
+                    </strong>
+
+                    <span>
+                        لوحة التحكم
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="admin-avatar"
+                    id="adminAvatar"
+                >
+                    ⚙️
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================================
+         END OF ADMIN HEADER
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         START OF ADMIN LAYOUT
+    ====================================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- =================================================
+             START OF SIDEBAR
+        ================================================== -->
+
+        <aside class="admin-sidebar">
+
+            <div class="sidebar-title">
+                لوحة الإدارة
+            </div>
+
+
+            <!-- =================================================
+                 ADMIN NAVIGATION
+            ================================================== -->
+
+            <nav class="admin-nav">
+
+
+                <!-- DASHBOARD -->
+
+                <button
+                    type="button"
+                    class="nav-item active"
+                    data-section="dashboard"
+                >
+
+                    <span class="nav-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        الرئيسية
+                    </span>
+
+                </button>
+
+
+                <!-- SUBJECTS -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="subjects"
+                >
+
+                    <span class="nav-icon">
+                        📚
+                    </span>
+
+                    <span>
+                        المواد الدراسية
+                    </span>
+
+                </button>
+
+
+                <!-- LECTURES -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="lectures"
+                >
+
+                    <span class="nav-icon">
+                        📖
+                    </span>
+
+                    <span>
+                        المحاضرات
+                    </span>
+
+                </button>
+
+
+                <!-- EXAMS -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="exams"
+                >
+
+                    <span class="nav-icon">
+                        📝
+                    </span>
+
+                    <span>
+                        الامتحانات
+                    </span>
+
+                </button>
+
+
+                <!-- SHEETS -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="sheets"
+                >
+
+                    <span class="nav-icon">
+                        📢
+                    </span>
+
+                    <span>
+                        الشيت والأخبار
+                    </span>
+
+                </button>
+
+
+                <!-- STUDENTS -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="students"
+                >
+
+                    <span class="nav-icon">
+                        👨‍🎓
+                    </span>
+
+                    <span>
+                        الطلاب
+                    </span>
+
+                </button>
+
+
+                <!-- RESULTS -->
+
+                <button
+                    type="button"
+                    class="nav-item"
+                    data-section="results"
+                >
+
+                    <span class="nav-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        النتائج
+                    </span>
+
+                </button>
+
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR FOOTER
+            ================================================== -->
+
+            <div class="sidebar-footer">
+
+
+                <!-- BACK TO WEBSITE -->
+
+                <a
+                    href="index.html"
+                    class="back-home"
+                >
+
+                    🏠
+
+                    <span>
+                        العودة للموقع
+                    </span>
+
+                </a>
+
+
+                <!-- LOGOUT -->
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="logout-btn"
+                >
+
+                    🚪
+
+                    <span>
+                        تسجيل الخروج
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+        <!-- =================================================
+             END OF SIDEBAR
+        ================================================== -->
+
+
+
+        <!-- =================================================
+             START OF MAIN CONTENT
+        ================================================== -->
+
+        <main class="admin-main">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                class="admin-section active"
+                id="section-dashboard"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            ENG FORGE
+                        </span>
+
+                        <h1>
+                            لوحة التحكم
+                        </h1>
+
+                        <p>
+                            إدارة المواد والمحاضرات والامتحانات والطلاب والنتائج.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     STATISTICS
+                ================================================== -->
+
+                <div class="stats-grid">
+
+
+                    <!-- SUBJECTS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📚
+                        </div>
+
+                        <div>
+
+                            <span>
+                                المواد
+                            </span>
+
+                            <strong id="subjectsCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LECTURES -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📖
+                        </div>
+
+                        <div>
+
+                            <span>
+                                المحاضرات
+                            </span>
+
+                            <strong id="lecturesCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXAMS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            📝
+                        </div>
+
+                        <div>
+
+                            <span>
+                                الامتحانات
+                            </span>
+
+                            <strong id="examsCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STUDENTS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            👨‍🎓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                الطلاب
+                            </span>
+
+                            <strong id="studentsCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                ================================================== -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <h2>
+                                إجراءات سريعة
+                            </h2>
+
+                            <p>
+                                الوصول السريع لأهم وظائف الإدارة.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <!-- ADD SUBJECT -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="subjects"
+                        >
+
+                            <span>
+                                📚
+                            </span>
+
+                            <strong>
+                                إضافة مادة
+                            </strong>
+
+                            <small>
+                                إنشاء مادة جديدة
+                            </small>
+
+                        </button>
+
+
+                        <!-- ADD LECTURE -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="lectures"
+                        >
+
+                            <span>
+                                📖
+                            </span>
+
+                            <strong>
+                                إضافة محاضرة
+                            </strong>
+
+                            <small>
+                                إنشاء محتوى تعليمي
+                            </small>
+
+                        </button>
+
+
+                        <!-- ADD EXAM -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="exams"
+                        >
+
+                            <span>
+                                📝
+                            </span>
+
+                            <strong>
+                                إنشاء امتحان
+                            </strong>
+
+                            <small>
+                                إضافة أسئلة ودرجات
+                            </small>
+
+                        </button>
+
+
+                        <!-- ADD SHEET -->
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="sheets"
+                        >
+
+                            <span>
+                                📢
+                            </span>
+
+                            <strong>
+                                إضافة شيت / خبر
+                            </strong>
+
+                            <small>
+                                نشر محتوى مهم
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SUBJECTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-subjects"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            CONTENT
+                        </span>
+
+                        <h1>
+                            المواد الدراسية
+                        </h1>
+
+                        <p>
+                            إضافة وتعديل وحذف المواد الدراسية.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addSubjectBtn"
+                    >
+                        + إضافة مادة
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="subjectsList"
+                >
+
+                    <!--
+                        SUBJECTS WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 LECTURES
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-lectures"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            EDUCATION
+                        </span>
+
+                        <h1>
+                            المحاضرات
+                        </h1>
+
+                        <p>
+                            إنشاء وتنظيم المحاضرات والمحتوى التعليمي.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addLectureBtn"
+                    >
+                        + إضافة محاضرة
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="lecturesList"
+                >
+
+                    <!--
+                        LECTURES WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EXAMS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-exams"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            TESTS
+                        </span>
+
+                        <h1>
+                            الامتحانات
+                        </h1>
+
+                        <p>
+                            إنشاء الامتحانات وإدارة الأسئلة والدرجات.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addExamBtn"
+                    >
+                        + إنشاء امتحان
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="examsList"
+                >
+
+                    <!--
+                        EXAMS WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SHEETS & NEWS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-sheets"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            IMPORTANT
+                        </span>
+
+                        <h1>
+                            الشيت والأخبار
+                        </h1>
+
+                        <p>
+                            إدارة الشيتات والواجبات والأخبار المهمة.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addSheetBtn"
+                    >
+                        + إضافة محتوى
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="sheetsList"
+                >
+
+                    <!--
+                        SHEETS WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-students"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            USERS
+                        </span>
+
+                        <h1>
+                            الطلاب
+                        </h1>
+
+                        <p>
+                            البحث عن الطلاب ومراجعة بياناتهم.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <input
+                        type="search"
+                        id="studentSearch"
+                        placeholder="ابحث باسم الطالب أو رقم الطالب..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        id="studentSearchBtn"
+                    >
+                        🔍 بحث
+                    </button>
+
+                </div>
+
+
+                <!-- STUDENTS LIST -->
+
+                <div
+                    class="content-list"
+                    id="studentsList"
+                >
+
+                    <!--
+                        STUDENTS WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="section-results"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            RESULTS
+                        </span>
+
+                        <h1>
+                            النتائج
+                        </h1>
+
+                        <p>
+                            مراجعة إجابات الطلاب وتصحيح واعتماد النتائج.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="resultsList"
+                >
+
+                    <!--
+                        RESULTS WILL BE LOADED HERE
+                    -->
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+        <!-- =================================================
+             END OF MAIN CONTENT
+        ================================================== -->
+
+    </div>
+
+    <!-- =====================================================
+         END OF ADMIN LAYOUT
+    ====================================================== -->
+
+
+
+    <!-- =====================================================
+         GLOBAL MODAL CONTAINER
+
+         admin-core.js WILL CONTROL THIS CONTAINER
+    ====================================================== -->
+
+    <div
+        id="modalContainer"
+        class="modal-container"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =====================================================
+         GLOBAL NOTIFICATION CONTAINER
+
+         admin-core.js WILL USE THIS
+    ====================================================== -->
+
+    <div
+        id="notificationContainer"
+        class="notification-container"
+        aria-live="polite"
+        aria-atomic="true"
+    ></div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script
+        type="module"
+        src="firebase.js"
+    ></script>
+
+
+    <script
+        type="module"
+        src="cloudinary.js"
+    ></script>
+
+
+    <!-- ADMIN CORE -->
+
+    <script
+        type="module"
+        src="admin-core.js"
+    ></script>
+
+
+    <!-- CONTENT MANAGEMENT -->
+
+    <script
+        type="module"
+        src="admin-content.js"
+    ></script>
+
+
+    <!-- EXAM MANAGEMENT -->
+
+    <script
+        type="module"
+        src="admin-exams.js"
+    ></script>
+
+
+    <!-- RESULTS MANAGEMENT -->
+
+    <script
+        type="module"
+        src="admin-results.js"
+    ></script>
+
+
+</body>
+
+</html>

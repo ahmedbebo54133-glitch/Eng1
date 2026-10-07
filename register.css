@@ -1,0 +1,1194 @@
+/*=========================================================
+        ENG FORGE
+        REGISTER PAGE
+        STYLE
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Cairo',sans-serif;
+
+    color:#fff;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(78,168,255,.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(78,168,255,.08),
+            transparent 30%
+        ),
+        #11161d;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+    overflow-x:hidden;
+
+}
+
+
+/*=========================================================
+        ENGINEERING GRID
+=========================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:45px 45px;
+
+}
+
+
+/*=========================================================
+        CONTAINER
+=========================================================*/
+
+.auth-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:480px;
+
+    animation:registerShow .7s ease;
+
+}
+
+
+/*=========================================================
+        LOGO
+=========================================================*/
+
+.auth-logo{
+
+    text-align:center;
+
+    margin-bottom:22px;
+
+}
+
+.auth-logo a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+}
+
+.auth-logo span{
+
+    color:#4ea8ff;
+
+}
+
+.auth-logo p{
+
+    margin-top:5px;
+
+    color:#8290a0;
+
+    font-size:13px;
+
+}
+
+
+/*=========================================================
+        CARD
+=========================================================*/
+
+.auth-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(29,40,53,.98),
+            rgba(15,21,29,.98)
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:32px 30px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.45);
+
+}
+
+
+/* TOP BLUE LINE */
+
+.auth-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4ea8ff,
+            transparent
+        );
+
+}
+
+
+/* ENGINEERING GEAR */
+
+.auth-card::after{
+
+    content:"⚙";
+
+    position:absolute;
+
+    left:-28px;
+
+    bottom:-45px;
+
+    font-size:140px;
+
+    color:rgba(78,168,255,.035);
+
+    transform:rotate(-15deg);
+
+    pointer-events:none;
+
+}
+
+
+/*=========================================================
+        TITLE
+=========================================================*/
+
+.auth-title{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.auth-icon{
+
+    width:65px;
+
+    height:65px;
+
+    margin:0 auto 13px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:rgba(78,168,255,.09);
+
+    border:1px solid rgba(78,168,255,.22);
+
+    font-size:29px;
+
+    box-shadow:
+        0 0 25px rgba(78,168,255,.08);
+
+}
+
+.auth-title h1{
+
+    font-size:28px;
+
+    font-weight:900;
+
+}
+
+.auth-title p{
+
+    margin-top:5px;
+
+    color:#8290a0;
+
+    font-size:13px;
+
+}
+
+
+/*=========================================================
+        FORM
+=========================================================*/
+
+.auth-form{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*=========================================================
+        INPUT GROUP
+=========================================================*/
+
+.input-group{
+
+    margin-bottom:15px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#dce4ec;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.input-wrapper{
+
+    position:relative;
+
+}
+
+.input-icon{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    font-size:17px;
+
+    opacity:.7;
+
+    pointer-events:none;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    height:50px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#0c1219;
+
+    color:#fff;
+
+    outline:none;
+
+    padding:0 47px 0 14px;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.input-group input::placeholder{
+
+    color:#586676;
+
+}
+
+.input-group input:focus{
+
+    border-color:#4ea8ff;
+
+    background:#101820;
+
+    box-shadow:
+        0 0 0 3px rgba(78,168,255,.09);
+
+}
+
+
+/*=========================================================
+        CHECKBOX
+=========================================================*/
+
+.checkbox-group{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+    margin:7px 0 16px;
+
+    color:#8997a7;
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    cursor:pointer;
+
+}
+
+.checkbox-group input{
+
+    margin-top:4px;
+
+    accent-color:#4ea8ff;
+
+    cursor:pointer;
+
+}
+
+
+/*=========================================================
+        REGISTER BUTTON
+=========================================================*/
+
+.auth-submit{
+
+    width:100%;
+
+    height:52px;
+
+    border:0;
+
+    border-radius:12px;
+
+    background:#4ea8ff;
+
+    color:#081018;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:15px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.auth-submit:hover{
+
+    background:#69b8ff;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(78,168,255,.25);
+
+}
+
+.auth-submit:active{
+
+    transform:translateY(0);
+
+}
+
+.auth-submit:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+/*=========================================================
+        DIVIDER
+=========================================================*/
+
+.auth-divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:20px 0;
+
+    color:#687687;
+
+    font-size:12px;
+
+}
+
+.auth-divider::before,
+.auth-divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/*=========================================================
+        GOOGLE BUTTON
+=========================================================*/
+
+.google-btn{
+
+    width:100%;
+
+    height:50px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    background:#171f28;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.google-btn:hover{
+
+    background:#202b37;
+
+    border-color:rgba(78,168,255,.3);
+
+    transform:translateY(-2px);
+
+}
+
+.google-icon{
+
+    width:23px;
+
+    height:23px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-family:Arial,sans-serif;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+/*=========================================================
+        MESSAGE
+=========================================================*/
+
+.auth-message{
+
+    display:none;
+
+    margin-top:15px;
+
+    padding:11px 13px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+}
+
+.auth-message.show{
+
+    display:block;
+
+}
+
+.auth-message.error{
+
+    color:#ff9292;
+
+    background:rgba(255,60,60,.07);
+
+    border:1px solid rgba(255,60,60,.16);
+
+}
+
+.auth-message.success{
+
+    color:#70efaa;
+
+    background:rgba(0,255,120,.06);
+
+    border:1px solid rgba(0,255,120,.15);
+
+}
+
+
+/*=========================================================
+        LOADING
+=========================================================*/
+
+.auth-loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:12px;
+
+    color:#4ea8ff;
+
+    font-size:12px;
+
+}
+
+.auth-loading.active{
+
+    display:block;
+
+}
+
+
+/*=========================================================
+        SWITCH LOGIN
+=========================================================*/
+
+.auth-switch{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#8290a0;
+
+    font-size:12px;
+
+}
+
+.auth-switch a{
+
+    color:#4ea8ff;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+}
+
+.auth-switch a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/*=========================================================
+        BACK HOME
+=========================================================*/
+
+.back-home{
+
+    display:block;
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    color:#657384;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    transition:.3s;
+
+}
+
+.back-home:hover{
+
+    color:#4ea8ff;
+
+}
+
+
+/*=========================================================
+        ANIMATION
+=========================================================*/
+
+@keyframes registerShow{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/*=========================================================
+        SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b1016;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#4ea8ff;
+
+    border-radius:20px;
+
+}
+
+
+/*=========================================================
+        MOBILE
+=========================================================*/
+
+@media(max-width:600px){
+
+    body{
+
+        padding:15px;
+
+        align-items:flex-start;
+
+        padding-top:25px;
+
+    }
+
+    .auth-container{
+
+        max-width:100%;
+
+    }
+
+    .auth-logo a{
+
+        font-size:29px;
+
+    }
+
+    .auth-card{
+
+        padding:27px 20px;
+
+        border-radius:20px;
+
+    }
+
+    .auth-title h1{
+
+        font-size:25px;
+
+    }
+
+}
+
+
+/*=========================================================
+        SMALL PHONES
+=========================================================*/
+
+@media(max-width:380px){
+
+    body{
+
+        padding:10px;
+
+        padding-top:18px;
+
+    }
+
+    .auth-card{
+
+        padding:23px 15px;
+
+    }
+
+    .auth-title{
+
+        margin-bottom:20px;
+
+    }
+
+    .input-group{
+
+        margin-bottom:13px;
+
+    }
+
+}
+/* =========================================================
+   GENDER SELECT
+========================================================= */
+
+.gender-group {
+    margin-top: 18px;
+}
+
+.gender-title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.gender-options {
+    display: flex;
+    gap: 12px;
+}
+
+.gender-option {
+    flex: 1;
+    min-height: 55px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+
+    background: #171d25;
+    color: #aaa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.gender-option:hover {
+    transform: translateY(-2px);
+}
+
+.gender-icon {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   MALE
+========================================================= */
+
+.gender-option.male.selected {
+    color: #4ea8ff;
+
+    border-color: #4ea8ff;
+
+    background:
+        rgba(78,168,255,0.10);
+
+    box-shadow:
+        0 0 15px rgba(78,168,255,0.15);
+}
+
+
+/* =========================================================
+   FEMALE
+========================================================= */
+
+.gender-option.female.selected {
+    color: #ff6fae;
+
+    border-color: #ff6fae;
+
+    background:
+        rgba(255,111,174,0.10);
+
+    box-shadow:
+        0 0 15px rgba(255,111,174,0.15);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .gender-options {
+        gap: 8px;
+    }
+
+    .gender-option {
+        min-height: 52px;
+        font-size: 14px;
+    }
+
+    .gender-icon {
+        font-size: 22px;
+    }
+
+}
+/*=========================================================
+        PROFILE PHOTO
+=========================================================*/
+
+.profile-photo-group {
+    margin-top: 5px;
+}
+
+
+.optional-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #7f8b99;
+    margin-right: 5px;
+}
+
+
+.profile-photo-picker {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    border: 1px solid rgba(78, 168, 255, 0.15);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.025);
+    transition: 0.25s ease;
+}
+
+
+.profile-photo-picker:hover {
+    border-color: rgba(78, 168, 255, 0.45);
+    background: rgba(78, 168, 255, 0.035);
+}
+
+
+/*=========================================================
+        PHOTO PREVIEW
+=========================================================*/
+
+.profile-photo-preview {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18212c,
+            #0e1319
+        );
+
+    border: 2px solid rgba(78, 168, 255, 0.35);
+
+    box-shadow:
+        0 0 18px rgba(78, 168, 255, 0.08);
+
+    position: relative;
+}
+
+
+/* Placeholder */
+
+#profilePhotoPlaceholder {
+    font-size: 28px;
+    opacity: 0.65;
+    transition: 0.2s ease;
+}
+
+
+#profilePhotoPlaceholder.hidden {
+    display: none;
+}
+
+
+/* Actual image */
+
+#profilePhotoImage {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+
+#profilePhotoImage.show {
+    display: block;
+}
+
+
+/*=========================================================
+        PHOTO ACTIONS
+=========================================================*/
+
+.profile-photo-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+
+.profile-photo-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+
+    border-radius: 10px;
+
+    background: rgba(78, 168, 255, 0.10);
+
+    border: 1px solid rgba(78, 168, 255, 0.30);
+
+    color: #4ea8ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+
+.profile-photo-btn:hover {
+    background: rgba(78, 168, 255, 0.18);
+
+    border-color: rgba(78, 168, 255, 0.55);
+
+    transform: translateY(-1px);
+}
+
+
+/* Hide original file input */
+
+#profilePhoto {
+    display: none;
+}
+
+
+.profile-photo-actions small {
+    color: #7f8b99;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/*=========================================================
+        REMOVE PHOTO
+=========================================================*/
+
+.remove-profile-photo {
+    border: none;
+
+    background: transparent;
+
+    color: #8c96a3;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    padding: 2px 0;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.remove-profile-photo:hover {
+    color: #ff6b6b;
+}
+
+
+/*=========================================================
+        MOBILE
+=========================================================*/
+
+@media (max-width: 480px) {
+
+    .profile-photo-picker {
+        gap: 12px;
+        padding: 12px;
+    }
+
+
+    .profile-photo-preview {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+    }
+
+
+    .profile-photo-btn {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+
+}

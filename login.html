@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <!-- =====================================================
+         ENG FORGE
+         LOGIN PAGE
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#11161d"
+    >
+
+    <meta
+        name="description"
+        content="ENG Forge - تسجيل دخول الطلاب"
+    >
+
+    <title>ENG Forge | تسجيل الدخول</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         LOGIN STYLE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         START LOGIN CONTAINER
+    ====================================================== -->
+
+    <main class="auth-container">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="auth-logo">
+
+            <a href="index.html">
+
+                ENG Forge
+
+                <span>
+                    ⚙️
+                </span>
+
+            </a>
+
+            <p>
+                قسم تشغيل وتشكيل المعادن
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN CARD
+        ================================================== -->
+
+        <section class="auth-card">
+
+
+            <!-- =================================================
+                 TITLE
+            ================================================== -->
+
+            <div class="auth-title">
+
+                <div class="auth-icon">
+                    🔐
+                </div>
+
+                <h1>
+                    تسجيل الدخول
+                </h1>
+
+                <p>
+                    أهلاً بك مرة أخرى في ENG Forge
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 LOGIN FORM
+            ================================================== -->
+
+            <form
+                id="loginForm"
+                class="auth-form"
+            >
+
+
+                <!-- ===============================
+                     EMAIL
+                ================================ -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        البريد الإلكتروني
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            📧
+                        </span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            dir="ltr"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===============================
+                     PASSWORD
+                ================================ -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        كلمة المرور
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            🔒
+                        </span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="••••••••"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ===============================
+                     FORGOT PASSWORD
+                ================================ -->
+
+                <div class="forgot-password-wrapper">
+
+                    <button
+                        type="button"
+                        id="forgotPasswordBtn"
+                        class="forgot-password-btn"
+                    >
+                        نسيت كلمة السر؟
+                    </button>
+
+                </div>
+
+
+                <!-- ===============================
+                     LOGIN BUTTON
+                ================================ -->
+
+                <button
+                    type="submit"
+                    id="loginBtn"
+                    class="auth-submit"
+                >
+
+                    تسجيل الدخول
+
+                </button>
+
+
+                <!-- ===============================
+                     DIVIDER
+                ================================ -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        أو
+                    </span>
+
+                </div>
+
+
+                <!-- ===============================
+                     GOOGLE LOGIN
+                ================================ -->
+
+                <button
+                    type="button"
+                    id="googleLoginBtn"
+                    class="google-btn"
+                >
+
+                    <span class="google-icon">
+                        G
+                    </span>
+
+                    <span>
+                        المتابعة باستخدام Google
+                    </span>
+
+                </button>
+
+
+                <!-- ===============================
+                     MESSAGE
+                ================================ -->
+
+                <div
+                    id="authMessage"
+                    class="auth-message"
+                ></div>
+
+
+                <!-- ===============================
+                     LOADING
+                ================================ -->
+
+                <div
+                    id="authLoading"
+                    class="auth-loading"
+                >
+                    جاري تسجيل الدخول...
+                </div>
+
+
+            </form>
+
+
+            <!-- =================================================
+                 REGISTER LINK
+            ================================================== -->
+
+            <div class="auth-switch">
+
+                ليس لديك حساب؟
+
+                <a href="register.html">
+                    إنشاء حساب جديد
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 BACK HOME
+            ================================================== -->
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                ← العودة إلى الصفحة الرئيسية
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FORGOT PASSWORD MODAL
+    ====================================================== -->
+
+    <div
+        id="forgotPasswordModal"
+        class="forgot-modal"
+        aria-hidden="true"
+    >
+
+        <!-- MODAL BACKDROP -->
+
+        <div
+            id="forgotModalOverlay"
+            class="forgot-modal-overlay"
+        ></div>
+
+
+        <!-- MODAL CARD -->
+
+        <div class="forgot-modal-card">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <button
+                type="button"
+                id="closeForgotModal"
+                class="forgot-close"
+                aria-label="إغلاق"
+            >
+                ×
+            </button>
+
+
+            <!-- ICON -->
+
+            <div class="forgot-modal-icon">
+                🔑
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h2>
+                نسيت كلمة السر؟
+            </h2>
+
+
+            <!-- DESCRIPTION -->
+
+            <p class="forgot-description">
+
+                اكتب البريد الإلكتروني المرتبط بحسابك،
+                وسنرسل لك رابطًا لإعادة تعيين كلمة السر.
+
+            </p>
+
+
+            <!-- RESET FORM -->
+
+            <form
+                id="forgotPasswordForm"
+            >
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="forgotEmail">
+                        البريد الإلكتروني
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            📧
+                        </span>
+
+                        <input
+                            type="email"
+                            id="forgotEmail"
+                            name="forgotEmail"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                            dir="ltr"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESET BUTTON -->
+
+                <button
+                    type="submit"
+                    id="resetPasswordBtn"
+                    class="auth-submit"
+                >
+
+                    إرسال رابط إعادة التعيين
+
+                </button>
+
+
+                <!-- RESET MESSAGE -->
+
+                <div
+                    id="forgotPasswordMessage"
+                    class="forgot-password-message"
+                ></div>
+
+
+                <!-- RESET LOADING -->
+
+                <div
+                    id="forgotPasswordLoading"
+                    class="forgot-password-loading"
+                >
+
+                    جاري إرسال الرابط...
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="firebase.js"
+    ></script>
+
+    <script
+        type="module"
+        src="login.js"
+    ></script>
+
+
+</body>
+
+</html>

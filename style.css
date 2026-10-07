@@ -1,0 +1,1279 @@
+/*=========================================================
+        STUDY PLATFORM
+        ENGINEERING - MACHINING & FORMING
+        MAIN STYLE
+=========================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#11161d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/*=========================================================
+                    SCROLLBAR
+=========================================================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0b0f14;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#4ea8ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#69b8ff;
+}
+
+
+/*=========================================================
+                    HEADER
+=========================================================*/
+
+.main-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:78px;
+
+    display:flex;
+    align-items:center;
+
+    background:rgba(10,15,21,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    z-index:1000;
+}
+
+
+.header-content{
+
+    width:92%;
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+
+/*=========================================================
+                    LOGO
+=========================================================*/
+
+.logo{
+
+    position:relative;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:25px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.logo::before{
+
+    content:"";
+
+    display:inline-block;
+
+    width:8px;
+
+    height:28px;
+
+    margin-left:9px;
+
+    vertical-align:-5px;
+
+    background:#4ea8ff;
+
+    border-radius:3px;
+
+    box-shadow:0 0 15px rgba(78,168,255,.45);
+}
+
+.logo:hover{
+
+    color:#4ea8ff;
+}
+
+
+/*=========================================================
+                PROFILE BUTTON
+=========================================================*/
+
+.profile-btn{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#1a2532;
+
+    border:1px solid rgba(78,168,255,.22);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:21px;
+
+    transition:.35s;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.profile-btn:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#4ea8ff;
+
+    background:#202f40;
+
+    box-shadow:0 8px 25px rgba(78,168,255,.2);
+}
+
+
+/*=========================================================
+                    MAIN
+=========================================================*/
+
+.main-content{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:0 auto;
+
+    padding-top:125px;
+
+    padding-bottom:70px;
+}
+
+
+/*=========================================================
+                WELCOME SECTION
+=========================================================*/
+
+.welcome-section{
+
+    position:relative;
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+    animation:fadeUp .7s ease;
+}
+
+.welcome-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-90px;
+    right:50%;
+
+    transform:translateX(50%);
+
+    background:rgba(78,168,255,.08);
+
+    filter:blur(60px);
+
+    pointer-events:none;
+}
+
+.welcome-section h1{
+
+    position:relative;
+
+    font-size:43px;
+
+    font-weight:900;
+
+    letter-spacing:.5px;
+
+    color:#fff;
+}
+
+.welcome-section h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:3px;
+
+    margin:15px auto 0;
+
+    background:#4ea8ff;
+
+    border-radius:10px;
+
+    box-shadow:0 0 15px rgba(78,168,255,.45);
+}
+
+.welcome-section p{
+
+    position:relative;
+
+    margin-top:15px;
+
+    color:#8f9dad;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+
+/*=========================================================
+                SUBJECTS SECTION
+=========================================================*/
+
+.subjects-section{
+
+    width:100%;
+}
+
+
+/*=========================================================
+                SUBJECTS CONTAINER
+=========================================================*/
+
+.subjects-container{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+
+/*=========================================================
+                    SUBJECT CARD
+=========================================================*/
+
+.subject-card{
+
+    position:relative;
+
+    min-height:185px;
+
+    width:100%;
+
+    padding:30px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b2734,
+            #151d27
+        );
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:20px;
+
+    color:#fff;
+
+    transition:.4s;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.28);
+}
+
+
+/* Metal line */
+
+.subject-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    width:100%;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4ea8ff,
+            transparent
+        );
+
+    transform:scaleX(.15);
+
+    transition:.4s;
+}
+
+
+/* Engineering corner */
+
+.subject-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-30px;
+    bottom:-30px;
+
+    width:100px;
+    height:100px;
+
+    border:1px solid rgba(78,168,255,.08);
+
+    transform:rotate(45deg);
+
+    transition:.4s;
+}
+
+
+/* Hover */
+
+.subject-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(78,168,255,.55);
+
+    background:
+        linear-gradient(
+            145deg,
+            #202f40,
+            #17212c
+        );
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.42),
+        0 0 25px rgba(78,168,255,.10);
+}
+
+.subject-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.subject-card:hover::after{
+
+    transform:
+        rotate(45deg)
+        scale(1.2);
+
+    border-color:rgba(78,168,255,.18);
+}
+
+
+/*=========================================================
+                    SUBJECT ICON
+=========================================================*/
+
+.subject-icon{
+
+    width:68px;
+    height:68px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:18px;
+
+    border-radius:16px;
+
+    background:rgba(78,168,255,.09);
+
+    border:1px solid rgba(78,168,255,.14);
+
+    color:#4ea8ff;
+
+    font-size:31px;
+
+    transition:.4s;
+}
+
+.subject-card:hover .subject-icon{
+
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+
+    background:rgba(78,168,255,.14);
+
+    border-color:rgba(78,168,255,.35);
+
+    box-shadow:
+        0 0 25px rgba(78,168,255,.13);
+}
+
+
+/*=========================================================
+                SUBJECT TITLE
+=========================================================*/
+
+.subject-card h2{
+
+    font-size:22px;
+
+    font-weight:900;
+
+    color:#fff;
+
+    margin-bottom:8px;
+}
+
+
+/*=========================================================
+                SUBJECT DESCRIPTION
+=========================================================*/
+
+.subject-card p{
+
+    color:#8f9dad;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    max-width:260px;
+}
+
+
+/*=========================================================
+                ENGINEERING BADGE
+=========================================================*/
+
+.subject-badge{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    padding:5px 10px;
+
+    border-radius:7px;
+
+    background:rgba(78,168,255,.08);
+
+    border:1px solid rgba(78,168,255,.12);
+
+    color:#8fcaff;
+
+    font-size:10px;
+
+    font-weight:800;
+}
+
+
+/*=========================================================
+                    FOOTER
+=========================================================*/
+
+.main-footer{
+
+    margin-top:40px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    background:#0c1117;
+
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.main-footer p{
+
+    color:#6f7d8c;
+
+    font-size:13px;
+}
+
+
+/*=========================================================
+                    ANIMATIONS
+=========================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+
+/*=========================================================
+                    LOADING
+=========================================================*/
+
+.loading{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#8f9dad;
+
+    font-size:15px;
+}
+
+.loading::before{
+
+    content:"";
+
+    display:block;
+
+    width:32px;
+    height:32px;
+
+    margin:0 auto 15px;
+
+    border:3px solid rgba(78,168,255,.15);
+
+    border-top-color:#4ea8ff;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/*=========================================================
+                ERROR MESSAGE
+=========================================================*/
+
+.error-message{
+
+    width:100%;
+
+    padding:20px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:rgba(255,70,70,.07);
+
+    border:1px solid rgba(255,70,70,.15);
+
+    color:#ff8b8b;
+
+    font-size:14px;
+}
+
+
+/*=========================================================
+                TABLET
+=========================================================*/
+
+@media(max-width:768px){
+
+    .main-header{
+
+        height:70px;
+    }
+
+    .header-content{
+
+        width:90%;
+    }
+
+    .logo{
+
+        font-size:21px;
+    }
+
+    .logo::before{
+
+        width:6px;
+
+        height:23px;
+
+        margin-left:7px;
+    }
+
+    .profile-btn{
+
+        width:42px;
+        height:42px;
+
+        font-size:19px;
+    }
+
+    .main-content{
+
+        width:90%;
+
+        padding-top:105px;
+    }
+
+    .welcome-section{
+
+        margin-bottom:38px;
+    }
+
+    .welcome-section h1{
+
+        font-size:32px;
+    }
+
+    .welcome-section p{
+
+        font-size:14px;
+    }
+
+    .subjects-container{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .subject-card{
+
+        min-height:165px;
+
+        padding:25px 15px;
+
+        border-radius:17px;
+    }
+
+    .subject-icon{
+
+        width:58px;
+        height:58px;
+
+        font-size:27px;
+
+        margin-bottom:14px;
+    }
+
+    .subject-card h2{
+
+        font-size:18px;
+    }
+
+    .subject-card p{
+
+        font-size:12px;
+    }
+}
+
+
+/*=========================================================
+                    SMALL PHONES
+=========================================================*/
+
+@media(max-width:450px){
+
+    .main-content{
+
+        width:92%;
+    }
+
+    .subjects-container{
+
+        grid-template-columns:1fr;
+
+        gap:16px;
+    }
+
+    .subject-card{
+
+        min-height:150px;
+    }
+
+    .welcome-section h1{
+
+        font-size:28px;
+    }
+
+    .welcome-section p{
+
+        font-size:13px;
+    }
+}
+
+
+/*=========================================================
+                ACCESSIBILITY
+=========================================================*/
+
+button,
+a{
+
+    -webkit-tap-highlight-color:transparent;
+}
+
+button:focus-visible,
+a:focus-visible{
+
+    outline:2px solid #4ea8ff;
+
+    outline-offset:3px;
+}
+/* =========================================
+   ENG FORGE
+   ACCOUNT MENU
+========================================= */
+
+.account-area{
+    position:relative;
+}
+
+
+/* ACCOUNT BUTTON */
+
+#accountBtn{
+
+    width:46px;
+    height:46px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#1a2531;
+
+    border:1px solid rgba(78,168,255,.18);
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    padding:0;
+
+}
+
+#accountBtn:hover{
+
+    background:#202f3e;
+
+    border-color:#4ea8ff;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(78,168,255,.18);
+
+}
+
+
+/* AVATAR */
+
+#userAvatarHome{
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    font-size:20px;
+
+}
+
+#userAvatarHome img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+
+/* =========================================
+   ACCOUNT MENU
+========================================= */
+
+.account-menu{
+
+    position:absolute;
+
+    top:58px;
+
+    left:0;
+
+    width:285px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b2633,
+            #111820
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.45);
+
+    z-index:2000;
+
+    animation:accountMenuShow .2s ease;
+
+}
+
+.account-menu[hidden]{
+
+    display:none;
+
+}
+
+
+/* BLUE TOP LINE */
+
+.account-menu::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    right:18px;
+
+    width:80px;
+    height:2px;
+
+    background:#4ea8ff;
+
+    border-radius:10px;
+
+}
+
+
+/* =========================================
+   ACCOUNT TITLE
+========================================= */
+
+.account-menu-title{
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    margin:8px 8px 3px;
+
+}
+
+.account-menu-subtitle{
+
+    color:#8290a0;
+
+    font-size:11px;
+
+    margin:0 8px 12px;
+
+}
+
+
+/* =========================================
+   USER INFO
+========================================= */
+
+.account-user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    padding:10px;
+
+    margin-bottom:8px;
+
+    background:rgba(78,168,255,.06);
+
+    border:1px solid rgba(78,168,255,.08);
+
+    border-radius:13px;
+
+}
+
+.account-user-avatar{
+
+    width:43px;
+    height:43px;
+
+    min-width:43px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:#172330;
+
+    border:1px solid rgba(78,168,255,.18);
+
+    overflow:hidden;
+
+    font-size:20px;
+
+}
+
+.account-user-avatar img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.account-user-details{
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.account-user-details strong{
+
+    color:#fff;
+
+    font-size:13px;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+.account-user-details span{
+
+    color:#778698;
+
+    font-size:10px;
+
+    margin-top:2px;
+
+    direction:ltr;
+
+    text-align:right;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+/* =========================================
+   MENU ITEMS
+========================================= */
+
+.account-menu-item{
+
+    width:100%;
+
+    min-height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    padding:9px 11px;
+
+    margin-top:5px;
+
+    border:none;
+
+    border-radius:11px;
+
+    background:transparent;
+
+    color:#dce4ec;
+
+    text-decoration:none;
+
+    font-family:'Cairo',sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.account-menu-item:hover{
+
+    background:rgba(78,168,255,.10);
+
+    color:#4ea8ff;
+
+    transform:translateX(-3px);
+
+}
+
+
+/* ICON */
+
+.account-menu-icon{
+
+    width:32px;
+    height:32px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:rgba(255,255,255,.05);
+
+    font-size:16px;
+
+    flex-shrink:0;
+
+}
+
+
+/* =========================================
+   ADMIN BUTTON
+========================================= */
+
+.admin-menu-item{
+
+    color:#4ea8ff;
+
+    background:rgba(78,168,255,.05);
+
+    border:1px solid rgba(78,168,255,.08);
+
+}
+
+.admin-menu-item:hover{
+
+    background:rgba(78,168,255,.13);
+
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.logout-item{
+
+    color:#ff8c8c;
+
+}
+
+.logout-item:hover{
+
+    color:#ff6d6d;
+
+    background:rgba(255,80,80,.08);
+
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes accountMenuShow{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-8px) scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .account-menu{
+
+        position:fixed;
+
+        top:70px;
+
+        left:12px;
+
+        right:12px;
+
+        width:auto;
+
+        max-width:none;
+
+    }
+
+}
+/*=========================================================
+        HOME ACCOUNT AVATAR
+=========================================================*/
+
+.user-avatar-home,
+.account-user-avatar {
+    overflow: hidden;
+    position: relative;
+}
+
+.user-avatar-home img,
+.account-user-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* لمسة بسيطة للصورة الموجودة في الهيدر */
+
+.user-avatar-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* صورة الحساب داخل القائمة */
+
+.account-user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

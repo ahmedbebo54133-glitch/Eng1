@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>المادة | ENG Forge ⚙️</title>
+
+    <!-- Cairo Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Subject CSS -->
+    <link
+        rel="stylesheet"
+        href="subject.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="subject-header">
+
+        <div class="subject-header-content">
+
+            <!-- Back -->
+            <a
+                href="index.html"
+                class="back-button"
+                title="العودة للرئيسية"
+            >
+                <span>→</span>
+            </a>
+
+
+            <!-- Logo -->
+            <a
+                href="index.html"
+                class="subject-logo"
+            >
+
+                <span class="logo-mark">⚙</span>
+
+                <span class="logo-text">
+                    ENG Forge
+                </span>
+
+            </a>
+
+
+            <!-- Student -->
+            <div
+                class="subject-user"
+                id="subjectUser"
+            >
+
+                <div class="subject-user-info">
+
+                    <strong id="studentName">
+                        جاري التحميل...
+                    </strong>
+
+                    <span>
+                        طالب
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="student-avatar"
+                    id="studentAvatar"
+                >
+                    👤
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="subject-main">
+
+
+        <!-- =================================================
+             SUBJECT HERO
+        ================================================== -->
+
+        <section
+            class="subject-hero"
+            id="subjectHero"
+        >
+
+            <div class="subject-hero-content">
+
+
+                <!-- Icon -->
+                <div
+                    class="subject-icon"
+                    id="subjectIcon"
+                >
+                    ⚙️
+                </div>
+
+
+                <!-- Information -->
+                <div class="subject-information">
+
+                    <span class="subject-label">
+                        المادة الدراسية
+                    </span>
+
+
+                    <h1 id="subjectName">
+                        جاري تحميل المادة...
+                    </h1>
+
+
+                    <p id="subjectDescription">
+                        جاري تحميل بيانات المادة...
+                    </p>
+
+
+                    <div class="subject-meta">
+
+                        <span id="lecturesMeta">
+                            📚 0 محاضرة
+                        </span>
+
+                        <span id="examsMeta">
+                            📝 0 امتحان
+                        </span>
+
+                        <span id="sheetsMeta">
+                            📄 0 ملف
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENT NAVIGATION
+        ================================================== -->
+
+        <nav class="content-tabs">
+
+            <button
+                class="content-tab active"
+                data-tab="lectures"
+                type="button"
+            >
+                <span>📚</span>
+                <span>المحاضرات</span>
+            </button>
+
+
+            <button
+                class="content-tab"
+                data-tab="exams"
+                type="button"
+            >
+                <span>📝</span>
+                <span>الامتحانات</span>
+            </button>
+
+
+            <button
+                class="content-tab"
+                data-tab="sheets"
+                type="button"
+            >
+                <span>📄</span>
+                <span>الشيتات</span>
+            </button>
+
+
+            <button
+                class="content-tab"
+                data-tab="news"
+                type="button"
+            >
+                <span>📢</span>
+                <span>المهم</span>
+            </button>
+
+        </nav>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <section class="subject-content">
+
+
+            <!-- =================================================
+                 LECTURES
+            ================================================== -->
+
+            <div
+                class="content-section active"
+                id="lecturesSection"
+                data-content="lectures"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            STUDY MATERIAL
+                        </span>
+
+                        <h2>
+                            المحاضرات
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="section-count"
+                        id="lecturesCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="lecturesList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <!-- Empty -->
+                <div
+                    class="empty-state"
+                    id="lecturesEmpty"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        لا توجد محاضرات حتى الآن
+                    </h3>
+
+                    <p>
+                        سيتم إضافة المحاضرات هنا عند توفرها.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 EXAMS
+            ================================================== -->
+
+            <div
+                class="content-section"
+                id="examsSection"
+                data-content="exams"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            TEST YOURSELF
+                        </span>
+
+                        <h2>
+                            الامتحانات
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="section-count"
+                        id="examsCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="examsList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <!-- Empty -->
+                <div
+                    class="empty-state"
+                    id="examsEmpty"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        لا توجد امتحانات حتى الآن
+                    </h3>
+
+                    <p>
+                        سيتم إضافة الامتحانات هنا عند توفرها.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SHEETS
+            ================================================== -->
+
+            <div
+                class="content-section"
+                id="sheetsSection"
+                data-content="sheets"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            FILES & SHEETS
+                        </span>
+
+                        <h2>
+                            الشيتات والملفات
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="section-count"
+                        id="sheetsCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="sheetsList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <!-- Empty -->
+                <div
+                    class="empty-state"
+                    id="sheetsEmpty"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        لا توجد ملفات حتى الآن
+                    </h3>
+
+                    <p>
+                        سيتم إضافة الشيتات والملفات هنا عند توفرها.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NEWS / IMPORTANT
+            ================================================== -->
+
+            <div
+                class="content-section"
+                id="newsSection"
+                data-content="news"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            IMPORTANT
+                        </span>
+
+                        <h2>
+                            المهم والإعلانات
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="section-count"
+                        id="newsCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="content-list"
+                    id="newsList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <!-- Empty -->
+                <div
+                    class="empty-state"
+                    id="newsEmpty"
+                    hidden
+                >
+
+                    <div class="empty-icon">
+                        📢
+                    </div>
+
+                    <h3>
+                        لا توجد إعلانات حتى الآن
+                    </h3>
+
+                    <p>
+                        لا توجد أخبار أو تنبيهات مهمة حاليًا.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LOADING SCREEN
+    ====================================================== -->
+
+    <div
+        class="page-loader"
+        id="pageLoader"
+    >
+
+        <div class="loader-box">
+
+            <div class="loader-icon">
+                ⚙
+            </div>
+
+            <div class="loader-spinner"></div>
+
+            <p>
+                جاري تحميل المادة...
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ERROR SCREEN
+    ====================================================== -->
+
+    <div
+        class="error-screen"
+        id="errorScreen"
+        hidden
+    >
+
+        <div class="error-box">
+
+            <div class="error-icon">
+                ⚠️
+            </div>
+
+            <h2>
+                تعذر تحميل المادة
+            </h2>
+
+            <p id="errorMessage">
+                حدث خطأ أثناء تحميل بيانات المادة.
+            </p>
+
+            <div class="error-actions">
+
+                <button
+                    type="button"
+                    id="retryBtn"
+                    class="primary-button"
+                >
+                    إعادة المحاولة
+                </button>
+
+                <a
+                    href="index.html"
+                    class="secondary-button"
+                >
+                    العودة للرئيسية
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SCRIPTS
+         جميع الملفات في Root
+    ====================================================== -->
+
+    <script
+        type="module"
+        src="firebase.js"
+    ></script>
+
+    <script
+        type="module"
+        src="subject.js"
+    ></script>
+
+</body>
+
+</html>

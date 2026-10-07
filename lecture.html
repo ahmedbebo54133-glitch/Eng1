@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>المحاضرة | ENG Forge</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="lecture.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="lecture-header">
+
+        <div class="lecture-header-content">
+
+            <button
+                type="button"
+                class="back-button"
+                id="backButton"
+            >
+                <span class="back-icon">→</span>
+                <span>العودة للمادة</span>
+            </button>
+
+            <div class="lecture-logo">
+
+                <div class="logo-mark">
+                    ⚙
+                </div>
+
+                <div class="logo-text">
+                    <strong>ENG</strong>
+                    <span>FORGE</span>
+                </div>
+
+            </div>
+
+            <div class="lecture-user" id="lectureUser">
+
+                <div class="lecture-user-info">
+                    <strong id="studentName">الطالب</strong>
+                    <span>طالب</span>
+                </div>
+
+                <div class="student-avatar" id="studentAvatar">
+                    <span>👤</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="lecture-main">
+
+        <!-- Loading -->
+
+        <section id="pageLoader" class="page-loader">
+
+            <div class="loader-box">
+
+                <div class="loader-icon">
+                    ⚙
+                </div>
+
+                <div class="loader-spinner"></div>
+
+                <p>جاري تحميل المحاضرة...</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Error -->
+
+        <section
+            id="errorScreen"
+            class="error-screen"
+            hidden
+        >
+
+            <div class="error-box">
+
+                <div class="error-icon">
+                    ⚠
+                </div>
+
+                <h2>تعذر تحميل المحاضرة</h2>
+
+                <p id="errorMessage">
+                    حدث خطأ أثناء تحميل البيانات.
+                </p>
+
+                <button
+                    type="button"
+                    id="retryButton"
+                    class="retry-button"
+                >
+                    إعادة المحاولة
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Lecture -->
+
+        <section
+            id="lecturePage"
+            class="lecture-page"
+            hidden
+        >
+
+            <!-- Lecture Hero -->
+
+            <div class="lecture-hero">
+
+                <div class="lecture-subject-label">
+                    <span class="label-icon">⚙</span>
+                    <span id="lectureSubjectName">
+                        المادة
+                    </span>
+                </div>
+
+                <h1 id="lectureTitle">
+                    عنوان المحاضرة
+                </h1>
+
+                <p
+                    id="lectureDescription"
+                    class="lecture-description"
+                ></p>
+
+                <div class="lecture-meta">
+
+                    <span>
+                        📖
+                        <span id="lectureBlockCount">0</span>
+                        عنصر
+                    </span>
+
+                    <span>
+                        🎓
+                        ENG Forge
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Lecture Content -->
+
+            <article
+                id="lectureContent"
+                class="lecture-content"
+            >
+            </article>
+
+
+            <!-- Bottom -->
+
+            <div class="lecture-bottom">
+
+                <button
+                    type="button"
+                    class="back-to-subject"
+                    id="bottomBackButton"
+                >
+                    ← العودة إلى المادة
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         SCRIPTS
+    ====================================================== -->
+
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="lecture.js"></script>
+
+</body>
+
+</html>

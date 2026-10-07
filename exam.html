@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>الامتحان | ENG Forge ⚙️</title>
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         EXAM CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="exam.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+    <div id="examPageLoader" class="page-loader">
+
+        <div class="loader-box">
+
+            <div class="loader-icon">
+                ⚙️
+            </div>
+
+            <div class="loader-spinner"></div>
+
+            <p>
+                جاري تحميل الامتحان...
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ERROR SCREEN
+    ====================================================== -->
+
+    <section
+        id="examError"
+        class="error-screen"
+        style="display: none;"
+    >
+
+        <div class="error-box">
+
+            <div class="error-icon">
+                ⚠️
+            </div>
+
+            <h2>
+                تعذر تحميل الامتحان
+            </h2>
+
+            <p id="examErrorMessage">
+                حدث خطأ أثناء تحميل بيانات الامتحان.
+            </p>
+
+            <div class="error-actions">
+
+                <button
+                    type="button"
+                    id="retryExamBtn"
+                    class="primary-btn"
+                >
+                    إعادة المحاولة
+                </button>
+
+                <button
+                    type="button"
+                    id="errorBackBtn"
+                    class="secondary-btn"
+                >
+                    العودة
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAIN EXAM PAGE
+    ====================================================== -->
+
+    <main
+        id="examContent"
+        style="display: none;"
+    >
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="exam-header">
+
+            <div class="exam-header-content">
+
+
+                <!-- BACK -->
+
+                <button
+                    type="button"
+                    id="backToSubjectBtn"
+                    class="back-button"
+                >
+
+                    <span class="back-icon">
+                        ←
+                    </span>
+
+                    <span>
+                        رجوع
+                    </span>
+
+                </button>
+
+
+
+                <!-- BRAND -->
+
+                <div class="exam-brand">
+
+                    <div class="logo-mark">
+                        ⚙️
+                    </div>
+
+                    <div class="logo-text">
+                        ENG Forge
+                    </div>
+
+                </div>
+
+
+
+                <!-- STUDENT -->
+
+                <div class="exam-student">
+
+                    <div class="exam-student-info">
+
+                        <strong id="examStudentName">
+                            الطالب
+                        </strong>
+
+                        <span id="examStudentId">
+                            —
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="examStudentAvatar"
+                        class="student-avatar"
+                    >
+                        👤
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="exam-hero">
+
+            <div class="exam-container">
+
+                <div class="exam-hero-card">
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="exam-subject-label">
+
+                        <span class="subject-icon">
+                            📚
+                        </span>
+
+                        <span id="examSubject">
+                            المادة
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- TITLE -->
+
+                    <h1 id="examTitle">
+                        اسم الامتحان
+                    </h1>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <p
+                        id="examDescription"
+                        class="exam-description"
+                    >
+                        وصف الامتحان
+                    </p>
+
+
+
+                    <!-- META -->
+
+                    <div class="exam-meta">
+
+
+                        <!-- DURATION -->
+
+                        <div class="exam-meta-item">
+
+                            <div class="meta-icon">
+                                ⏱️
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    المدة
+                                </small>
+
+                                <strong id="examDuration">
+                                    -- دقيقة
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- QUESTIONS -->
+
+                        <div class="exam-meta-item">
+
+                            <div class="meta-icon">
+                                ❓
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    عدد الأسئلة
+                                </small>
+
+                                <strong id="examQuestionCount">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- MARKS -->
+
+                        <div class="exam-meta-item">
+
+                            <div class="meta-icon">
+                                🎯
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    الدرجة النهائية
+                                </small>
+
+                                <strong id="examTotalMarks">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATUS BAR
+        ================================================== -->
+
+        <section class="exam-status-bar">
+
+            <div class="exam-container">
+
+                <div class="exam-status-inner">
+
+
+                    <!-- PROGRESS INFO -->
+
+                    <div class="progress-info">
+
+                        <span>
+                            التقدم
+                        </span>
+
+                        <strong id="answeredCount">
+                            0 / 0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="progress-wrapper">
+
+                        <div class="progress-track">
+
+                            <div
+                                id="progressBar"
+                                class="progress-bar"
+                                style="width: 0%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TIMER -->
+
+                    <div
+                        id="timerBox"
+                        class="timer-box"
+                    >
+
+                        <div class="timer-icon">
+                            ⏱️
+                        </div>
+
+                        <div class="timer-content">
+
+                            <small>
+                                الوقت المتبقي
+                            </small>
+
+                            <strong id="examTimer">
+                                00:00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <section class="exam-main">
+
+            <div class="exam-container">
+
+                <div class="exam-layout">
+
+
+                    <!-- =====================================
+                         QUESTIONS
+                    ====================================== -->
+
+                    <div class="questions-column">
+
+                        <div
+                            id="examQuestions"
+                        ></div>
+
+
+
+                        <!-- EMPTY -->
+
+                        <div
+                            id="questionsEmpty"
+                            class="questions-empty"
+                            style="display: none;"
+                        >
+
+                            <div class="empty-icon">
+                                📝
+                            </div>
+
+                            <h2>
+                                لا توجد أسئلة
+                            </h2>
+
+                            <p>
+                                لم يتم إضافة أسئلة لهذا الامتحان بعد.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         SIDEBAR
+                    ====================================== -->
+
+                    <aside class="exam-sidebar">
+
+
+                        <!-- QUESTION NAVIGATOR -->
+
+                        <div class="sidebar-card">
+
+                            <div class="sidebar-card-header">
+
+                                <div>
+
+                                    <span class="sidebar-icon">
+                                        📋
+                                    </span>
+
+                                    <strong>
+                                        أسئلة الامتحان
+                                    </strong>
+
+                                </div>
+
+                                <span
+                                    id="sidebarQuestionCount"
+                                    class="sidebar-count"
+                                >
+                                    0
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- NAVIGATION -->
+
+                            <div
+                                id="questionNavigator"
+                                class="question-navigator"
+                            ></div>
+
+
+
+                            <!-- LEGEND -->
+
+                            <div class="navigator-legend">
+
+                                <div class="legend-item">
+
+                                    <span class="legend-dot current"></span>
+
+                                    الحالي
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span class="legend-dot answered"></span>
+
+                                    تمت الإجابة
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span class="legend-dot unanswered"></span>
+
+                                    لم تتم الإجابة
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- SUBMIT CARD -->
+
+                        <div class="sidebar-card submit-card">
+
+                            <div class="submit-card-icon">
+                                ✓
+                            </div>
+
+                            <h3>
+                                جاهز للإرسال؟
+                            </h3>
+
+                            <p>
+                                تأكد من مراجعة إجاباتك قبل إرسال الامتحان.
+                            </p>
+
+                            <button
+                                type="button"
+                                id="sidebarSubmitBtn"
+                                class="submit-exam-btn"
+                            >
+
+                                <span>
+                                    ✓
+                                </span>
+
+                                إرسال الامتحان
+
+                            </button>
+
+                        </div>
+
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOTTOM NAVIGATION
+        ================================================== -->
+
+        <section class="exam-bottom-actions">
+
+            <div class="exam-container">
+
+                <div class="bottom-actions-inner">
+
+
+                    <!-- PREVIOUS -->
+
+                    <button
+                        type="button"
+                        id="previousQuestionBtn"
+                        class="navigation-btn secondary-btn"
+                    >
+
+                        ← السابق
+
+                    </button>
+
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="bottom-progress">
+
+                        السؤال
+
+                        <strong id="currentQuestionNumber">
+                            1
+                        </strong>
+
+                        من
+
+                        <strong id="totalQuestionNumber">
+                            0
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- NEXT -->
+
+                    <button
+                        type="button"
+                        id="nextQuestionBtn"
+                        class="navigation-btn primary-btn"
+                    >
+
+                        التالي →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         CONFIRM SUBMIT MODAL
+    ====================================================== -->
+
+    <div
+        id="confirmModal"
+        class="exam-modal-overlay"
+        style="display: none;"
+    >
+
+        <div class="exam-modal">
+
+
+            <!-- CLOSE -->
+
+            <button
+                type="button"
+                id="closeConfirmModal"
+                class="modal-close"
+            >
+                ×
+            </button>
+
+
+
+            <!-- ICON -->
+
+            <div class="modal-icon">
+                ⚠️
+            </div>
+
+
+
+            <h2>
+                إرسال الامتحان؟
+            </h2>
+
+
+
+            <p>
+                هل أنت متأكد من إرسال إجاباتك؟
+                لن تتمكن من تعديل الإجابات بعد الإرسال.
+            </p>
+
+
+
+            <!-- SUMMARY -->
+
+            <div class="submit-summary">
+
+
+                <div>
+
+                    <span>
+                        الأسئلة
+                    </span>
+
+                    <strong id="modalQuestionCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        تمت الإجابة
+                    </span>
+
+                    <strong id="modalAnsweredCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        بدون إجابة
+                    </span>
+
+                    <strong id="modalUnansweredCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WARNING -->
+
+            <div class="modal-warning">
+
+                <span>
+                    ⚠️
+                </span>
+
+                <span>
+                    بعد الضغط على "نعم، إرسال" سيتم حفظ الإجابات
+                    ولا يمكن تعديلها مرة أخرى.
+                </span>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    id="cancelSubmitBtn"
+                    class="secondary-btn"
+                >
+                    إلغاء
+                </button>
+
+                <button
+                    type="button"
+                    id="confirmSubmitBtn"
+                    class="primary-btn"
+                >
+                    نعم، إرسال
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TIME UP MODAL
+    ====================================================== -->
+
+    <div
+        id="timeUpModal"
+        class="exam-modal-overlay"
+        style="display: none;"
+    >
+
+        <div class="exam-modal time-up-modal">
+
+            <div class="modal-icon">
+                ⏰
+            </div>
+
+            <h2>
+                انتهى الوقت
+            </h2>
+
+            <p>
+                انتهى الوقت المحدد للامتحان.
+                سيتم إرسال إجاباتك تلقائيًا.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    id="timeUpSubmitBtn"
+                    class="primary-btn"
+                >
+                    إرسال الإجابات
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         SUCCESS SCREEN
+    ====================================================== -->
+
+    <div
+        id="submissionSuccess"
+        class="submission-success"
+        style="display: none;"
+    >
+
+        <div class="success-box">
+
+
+            <!-- ICON -->
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+
+
+            <h2>
+                تم إرسال الامتحان بنجاح
+            </h2>
+
+
+
+            <p>
+                تم حفظ إجاباتك وإرسالها للمراجعة.
+            </p>
+
+
+
+            <!-- SUMMARY -->
+
+            <div class="success-summary">
+
+
+                <div>
+
+                    <span>
+                        الدرجة
+                    </span>
+
+                    <strong id="successScore">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        من
+                    </span>
+
+                    <strong id="successTotalMarks">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        النسبة
+                    </span>
+
+                    <strong id="successPercentage">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        الحالة
+                    </span>
+
+                    <strong id="successStatus">
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- NOTE -->
+
+            <div class="success-note">
+
+                إذا كان الامتحان يحتوي على أسئلة مقالية،
+                سيتم مراجعتها يدويًا قبل اعتماد النتيجة النهائية.
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <button
+                type="button"
+                id="successBackBtn"
+                class="primary-btn"
+            >
+                العودة للمادة
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FIREBASE
+    ====================================================== -->
+
+    <script type="module" src="firebase.js"></script>
+
+
+    <!-- =====================================================
+         EXAM JS
+    ====================================================== -->
+
+    <script type="module" src="exam.js"></script>
+
+
+</body>
+
+</html>
