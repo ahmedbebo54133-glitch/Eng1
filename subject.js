@@ -1978,24 +1978,55 @@ watchAuth(
 
         try {
 
-            if (!user) {
+            /*
+             * الصفحة أصبحت متاحة للزائر أيضًا.
+             * تسجيل الدخول ليس شرطًا لعرض المادة.
+             */
 
-                window.location.href =
-                    "index.html";
+            currentUser =
+                user || null;
 
-                return;
+
+            /*
+             * إذا كان المستخدم مسجل دخول،
+             * نحمل بياناته وصورته.
+             */
+
+            if (user) {
+
+                await loadCurrentUser(
+                    user
+                );
+
+            } else {
+
+                /*
+                 * إذا كان زائرًا،
+                 * لا نمنعه من دخول الصفحة.
+                 */
+
+                if (studentName) {
+
+                    studentName.textContent =
+                        "زائر";
+
+                }
+
+
+                if (studentAvatar) {
+
+                    studentAvatar.textContent =
+                        "👤";
+
+                }
 
             }
 
 
-            currentUser =
-                user;
-
-
-            await loadCurrentUser(
-                user
-            );
-
+            /*
+             * تحميل المادة ومحتواها
+             * للزائر أو للطالب.
+             */
 
             await initializePage();
 
