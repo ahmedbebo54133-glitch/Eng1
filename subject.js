@@ -1,3 +1,4 @@
+
 /* =========================================================
    ENG FORGE
    SUBJECT PAGE
@@ -503,13 +504,14 @@ async function loadSubject() {
 
     } catch (error) {
 
+        // التعديل: إظهار كود الخطأ ورسالة Firebase الحقيقية
         console.error(
             "SUBJECT ERROR:",
             error
         );
 
         showError(
-            "تعذر تحميل بيانات المادة. تأكد من صلاحيات Firestore."
+            `خطأ تحميل المادة: ${error?.code || "unknown"} — ${error?.message || "سبب غير معروف"}`
         );
 
         return false;
@@ -1978,55 +1980,24 @@ watchAuth(
 
         try {
 
-            /*
-             * الصفحة أصبحت متاحة للزائر أيضًا.
-             * تسجيل الدخول ليس شرطًا لعرض المادة.
-             */
+            if (!user) {
 
-            currentUser =
-                user || null;
+                window.location.href =
+                    "index.html";
 
-
-            /*
-             * إذا كان المستخدم مسجل دخول،
-             * نحمل بياناته وصورته.
-             */
-
-            if (user) {
-
-                await loadCurrentUser(
-                    user
-                );
-
-            } else {
-
-                /*
-                 * إذا كان زائرًا،
-                 * لا نمنعه من دخول الصفحة.
-                 */
-
-                if (studentName) {
-
-                    studentName.textContent =
-                        "زائر";
-
-                }
-
-
-                if (studentAvatar) {
-
-                    studentAvatar.textContent =
-                        "👤";
-
-                }
+                return;
 
             }
 
 
-            /*
-             * تحميل المادة ومحتواها
-             * للزائر أو للطالب.
-             */
+            currentUser =
+                user;
+
+
+            await loadCurrentUser(
+                user
+            );
+
 
             await initializePage();
 
